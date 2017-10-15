@@ -15,11 +15,10 @@ const columns = [
 ];
 
 const getScores = (context, callback) => {
-	let $;
 	got('http://www.espnfc.com/english-premier-league/23/table')
 		.then(html => {
 			const teams = [];
-			$ = cheerio.load(html.body);
+			const $ = cheerio.load(html.body);
 			$('tbody').children('tr').each((i, elem) => {
 				teams[i] = $('td', elem);
 			});

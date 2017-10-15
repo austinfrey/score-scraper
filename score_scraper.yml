@@ -3,7 +3,7 @@ provider:
   gateway: http://localhost:8080
 
 functions:
-  score-scraper:
+  score_scraper:
     lang: node
-    handler: ./score-scraper
-    image: score-scraper
+    handler: ./score_scraper
+    image: score_scraper
